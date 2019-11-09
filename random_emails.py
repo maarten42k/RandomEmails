@@ -10,6 +10,7 @@ random_names = json.loads(open('random_names.json').read())
 random_domains = json.loads(open('random_domains.json').read())
 
 for name in random_names:
+# Create random e-mail addresses
     random_email = name.lower() + str(random.randint(2, 99)) + random.choice(random_domains)
     passw_lenght = random.randint(6, 15)
     random_passw = "".join(random.choice(chars) for i in range(passw_lenght))
